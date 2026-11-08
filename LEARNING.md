@@ -34,6 +34,10 @@ Changed the page background and primary buttons to Chiefs red (`#E31837`), with 
 
 Changed the headline and browser title to “Chiefs Brand Guide.” Added a local PNG logo from https://www.logo.dev/search/brands/chiefs.com at the top right of the header. Flexbox keeps the logo beside the heading, and a responsive width lets it shrink on small screens. Alternative text identifies the logo for screen readers.
 
+## 2026-11-08 — Add a dark mode toggle
+
+Added a header toggle with an accessible pressed state. CSS variables switch the page, cards, fields, text, and focus colors while keeping Chiefs red and gold accents. The first visit follows the system color preference; an explicit choice is saved in local storage. If storage is blocked, the toggle still works for the current visit. Theme behavior lives in `theme.js`.
+
 ## Try it yourself
 
 1. Open `index.html` and add two entries.

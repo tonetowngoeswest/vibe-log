@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chiefs Brand Guide</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="theme.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -15,7 +16,10 @@
           <h1>Chiefs Brand Guide</h1>
           <p>Keep track of what you tried and what you learned.</p>
         </div>
-        <img class="team-logo" src="chiefs-logo.png" alt="Kansas City Chiefs logo" width="112" height="112" />
+        <div class="header-actions">
+          <img class="team-logo" src="chiefs-logo.png" alt="Kansas City Chiefs logo" width="112" height="112" />
+          <button id="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode</button>
+        </div>
       </header>
 
       <form id="entry-form">
