@@ -10,6 +10,7 @@ Open `index.html` in your browser. No installation or build step is needed.
 
 - `index.html` — the page structure and entry form.
 - `style.css` — colors, spacing, fonts, and responsive layout.
+- `theme.js` — dark mode toggle and saved appearance preference.
 - `script.js` — adding, removing, and saving entries.
 - `LEARNING.md` — notes explaining each change.
 
@@ -21,3 +22,5 @@ Open `index.html` in your browser. No installation or build step is needed.
 - JavaScript responds to form submissions and button clicks.
 - Local storage keeps data in one browser; clearing browser data removes it. This is not a backup or a sync service.
 - Rendering user text with `textContent` displays it as text instead of interpreting it as HTML.
+
+Use the **Dark mode** toggle in the header to switch appearance. Your choice is remembered in this browser when storage is available; otherwise, the first visit follows your system preference.
