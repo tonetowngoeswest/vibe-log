@@ -17,6 +17,7 @@ Open `index.html` in your browser. No installation or build step is needed.
 
 - HTML gives a page its structure and meaningful labels.
 - CSS controls presentation and adapts the layout to smaller screens.
+- A team color palette can use red (`#E31837`) and gold (`#FFB81C`) for identity, with white and dark text for readability.
 - JavaScript responds to form submissions and button clicks.
 - Local storage keeps data in one browser; clearing browser data removes it. This is not a backup or a sync service.
 - Rendering user text with `textContent` displays it as text instead of interpreting it as HTML.

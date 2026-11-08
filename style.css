@@ -1,7 +1,7 @@
 :root {
   font-family: system-ui, sans-serif;
-  color: #263629;
-  background: #f5f4ed;
+  color: #fff;
+  background: #E31837;
   line-height: 1.6;
 }
 
@@ -9,23 +9,23 @@
 body { margin: 0; }
 main { width: min(100% - 2rem, 680px); margin: 4rem auto; }
 header { margin-bottom: 2rem; }
-.eyebrow { color: #51644e; font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.eyebrow { color: #FFB81C; font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 h1 { margin: 0; font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; }
 h2 { font-size: 1.25rem; margin-top: 2rem; }
-form, li { padding: 1.5rem; border: 1px solid #d6dccf; border-radius: 16px; background: #fff; }
+form, li { padding: 1.5rem; border: 2px solid #FFB81C; color: #242424; border-radius: 16px; background: #fff; }
 label { display: block; margin-bottom: .6rem; font-weight: 650; }
-textarea { width: 100%; padding: .8rem; border: 1px solid #889783; border-radius: 8px; resize: vertical; font: inherit; }
-button { padding: .65rem 1rem; border: 0; border-radius: 8px; background: #365c3c; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+textarea { width: 100%; padding: .8rem; border: 1px solid #777; border-radius: 8px; resize: vertical; font: inherit; }
+button { padding: .65rem 1rem; border: 0; border-radius: 8px; background: #E31837; color: white; font: inherit; font-weight: 600; cursor: pointer; }
 form button { margin-top: .8rem; }
-button:hover { background: #26452b; }
-:focus-visible { outline: 3px solid #a8641b; outline-offset: 3px; }
+button:hover { background: #b5122b; }
+:focus-visible { outline: 3px solid #242424; outline-offset: 3px; }
 ul { list-style: none; padding: 0; display: grid; gap: 1rem; }
 li p { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 1rem; }
 .entry-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; }
-time { font-size: .85rem; color: #53634f; }
-.remove-entry { background: #f1ebe5; color: #733b28; font-size: .85rem; }
-.remove-entry:hover { background: #e7dbd0; }
-#empty-state, #status { color: #53634f; }
+time { font-size: .85rem; color: #555; }
+.remove-entry { background: #FFB81C; color: #242424; font-size: .85rem; }
+.remove-entry:hover { background: #e5a619; }
+#empty-state, #status { color: #fff; }
 @media (max-width: 480px) {
   main { margin: 2rem auto; }
   form, li { padding: 1rem; }

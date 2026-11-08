@@ -26,6 +26,10 @@ Documented how to open the app, what each file does, and a running list of lesso
 
 Added “Sunday, November 8th: Hello, World!” followed by “I am watching the Chiefs game” as the starting entries. Saved browser entries take precedence, so refreshing preserves edits and removals.
 
+## 2026-11-08 — Switch to Chiefs colors
+
+Changed the page background and primary buttons to Chiefs red (`#E31837`), with gold (`#FFB81C`) accents, card borders, and remove buttons. White cards and dark text keep entries readable. Hover colors provide feedback, and dark focus outlines stay visible on both the red background and white cards.
+
 ## Try it yourself
 
 1. Open `index.html` and add two entries.
