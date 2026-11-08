@@ -45,3 +45,11 @@ Added a header toggle with an accessible pressed state. CSS variables switch the
 3. Remove an entry, then remove the last one to see the empty state.
 4. Try submitting only spaces and navigating with the Tab key.
 5. Change a color in `style.css`, refresh, and record what you learned here.
+
+## 2026-11-08 — Convert the journal to a news homepage
+
+Replaced the journal form and entries with a newspaper-style homepage inspired by the supplied screenshots: supporting photo stories on the left, a large lead story in the center, and a latest-headlines column on the right. Integrated all three supplied WebP photographs, with descriptive alternative text. Headlines are `TK`, deks are placeholders, and all bylines are Tony Hernandez.
+
+Built a large Chiefs-red masthead above the navigation. A sticky header uses a negative offset equal to the masthead height: scrolling hides the large banner while the compact logo and navigation remain visible. This avoids scroll listeners and layout jumps. Mobile layouts put the lead story first and stack the columns. Preserved dark mode, its saved preference, keyboard focus, and a skip link. Old journal data is not deleted from browser storage.
+
+Validation: checked all local asset paths, in-page anchors, six `TK` story headlines, six Tony Hernandez bylines, all three supplied photographs, and image alternative text. Homepage, theme script, and photo requests returned successfully from the local preview server. `git diff --check` passed. Browser preview was unavailable, so desktop/mobile appearance and sticky scrolling still need visual review.
