@@ -67,3 +67,7 @@ Validation: comment checks passed for starter entries, whitespace rejection, lit
 Reduced the expanded masthead from 164px to 124px on desktop and from 120px to 90px on mobile, keeping the existing 112px desktop and 70px mobile logos. The sticky offset follows the same height variable so the compact navigation still stays at the top.
 
 Replaced all three latest-news headlines and deks with the supplied copy, preserving Tony Hernandez bylines. Updated the centered note beneath the lead story with the Tonetown sentence. Verified the exact copy, unchanged logo sizes, and `git diff --check`. Browser visual review remains unavailable.
+
+### Footer placement correction
+
+Moved the Tonetown sentence into the very bottom footer beside CHIEFS NEWS, replacing the independent-coverage sentence. Restored the original centered newsroom note beneath the lead story.
