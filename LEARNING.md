@@ -53,3 +53,11 @@ Replaced the journal form and entries with a newspaper-style homepage inspired b
 Built a large Chiefs-red masthead above the navigation. A sticky header uses a negative offset equal to the masthead height: scrolling hides the large banner while the compact logo and navigation remain visible. This avoids scroll listeners and layout jumps. Mobile layouts put the lead story first and stack the columns. Preserved dark mode, its saved preference, keyboard focus, and a skip link. Old journal data is not deleted from browser storage.
 
 Validation: checked all local asset paths, in-page anchors, six `TK` story headlines, six Tony Hernandez bylines, all three supplied photographs, and image alternative text. Homepage, theme script, and photo requests returned successfully from the local preview server. `git diff --check` passed. Browser preview was unavailable, so desktop/mobile appearance and sticky scrolling still need visual review.
+
+## 2026-11-08 — Restore the log as comments and add story copy
+
+Added a full-width red comments section below the news grid. Restored the original log's add/remove behavior, timestamps, starter entries, validation, safe text rendering, and browser storage key so earlier saved entries reappear. The page explains that comments are browser-local. News layout, photos, and dark mode remain intact, with theme-aware form and comment surfaces.
+
+Applied the supplied headlines and deks to the top-left, bottom-left, and center photo stories respectively, keeping Tony Hernandez bylines. Resized the lead headline to fit full story copy on desktop and mobile.
+
+Validation: comment checks passed for starter entries, whitespace rejection, literal text rendering, save/reload, removal, empty state, blocked storage, and malformed data. Checked section placement, form elements, assets, supplied headlines, six bylines, and `git diff --check`. Browser preview remains unavailable.
