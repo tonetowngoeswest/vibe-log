@@ -71,7 +71,7 @@ h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; lette
 .story + .story { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
 .lead-story { text-align: center; }
 .lead-story .category { margin-top: 24px; }
-.lead-story h2 { font-size: clamp(64px, 7vw, 108px); line-height: 1; margin: 16px 0 22px; }
+.lead-story h2 { font-size: clamp(38px, 4.2vw, 62px); line-height: 1.08; margin: 16px 0 22px; }
 .lead-story .dek { max-width: 330px; margin: auto; font-size: 21px; }
 .lead-story .byline { margin-top: 28px; }
 .story-rule { display: block; width: 38px; height: 3px; background: var(--gold); margin: 28px auto; }
@@ -116,7 +116,7 @@ h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; lette
   .news-grid { display: flex; flex-direction: column; gap: 32px; }
   .lead-column { order: -1; }
   .lead-image img { aspect-ratio: 16 / 11; }
-  .lead-story h2 { font-size: 76px; }
+  .lead-story h2 { font-size: 40px; }
   .editor-note { display: none; }
   .supporting-stories { padding: 28px 0 0; border: 0; border-top: 1px solid var(--line); }
   .latest-column { display: block; }
@@ -124,4 +124,34 @@ h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; lette
   .latest-story { margin-bottom: 24px; }
   .site-footer { margin: 0 20px; flex-wrap: wrap; gap: 14px; }
   .site-footer p { width: 100%; order: 1; }
+}
+
+/* The original log continues below the stories on a full-width Chiefs-red field. */
+.comments-section { background: var(--red); color: #fff; border-top: 4px solid var(--gold); padding: 56px 20px 64px; }
+.comments-inner { width: min(100%, 680px); margin: 0 auto; }
+.comments-eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+#comments-heading { font-size: clamp(36px, 6vw, 52px); margin: 12px 0; }
+.comments-intro { font-family: Georgia, serif; font-size: 20px; line-height: 1.5; }
+.comments-note { margin: 12px 0 24px; font-size: 13px; line-height: 1.6; max-width: 540px; }
+#entry-form, #entries li { padding: 24px; background: var(--background); color: var(--text); border: 2px solid var(--gold); border-radius: 12px; }
+#entry-form label { display: block; font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+#entry-text { width: 100%; padding: 12px; border: 1px solid var(--muted); border-radius: 6px; font: inherit; line-height: 1.5; background: var(--background); color: var(--text); resize: vertical; }
+#entry-form button, .remove-entry { padding: 10px 16px; border: 0; border-radius: 6px; font-weight: 700; font-size: 13px; }
+#entry-form button { margin-top: 12px; color: #fff; background: var(--red); }
+#entry-form button:hover { background: #b9102b; }
+.comments-list-heading { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0; margin: 32px 0 16px; }
+#entries { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 16px; }
+#entries li > p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; margin-bottom: 18px; }
+.entry-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.entry-footer time { font-size: 12px; color: var(--muted); }
+.remove-entry { background: var(--gold); color: #181818; }
+.remove-entry:hover { background: #e5a619; }
+#status, #empty-state { font-size: 13px; line-height: 1.6; }
+#status { margin-top: 16px; }
+.comments-section :focus-visible { outline-color: #181818; }
+:root[data-theme="dark"] .comments-section :focus-visible { outline-color: var(--gold); }
+.site-footer { margin-top: 24px; }
+@media (max-width: 640px) {
+  .comments-section { padding: 36px 20px 44px; }
+  #entry-form, #entries li { padding: 18px; }
 }

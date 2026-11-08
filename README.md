@@ -8,14 +8,18 @@ Open `index.html` in your browser, or serve this folder with `python3 -m http.se
 
 - `index.html` — masthead, navigation, lead story, supporting stories, and latest headlines.
 - `style.css` — Chiefs red and gold branding, responsive news columns, sticky banner, and dark theme.
-- `script.js` — keyboard focus for navigation back to the stories.
+- `script.js` — saved comments, adding/removing entries, and keyboard focus for navigation back to the stories.
 - `theme.js` — dark mode and the saved appearance preference.
 - `Images/` — the three supplied story photographs.
 - `LEARNING.md` — notes on each change.
 
 ## Editing stories
 
-Every story headline is currently **TK**, and every byline is **Tony Hernandez**. Deks are placeholder summaries; replace them in `index.html` when copy is ready. Articles are static previews without story-detail pages. The homepage replaces the journal interface; previously saved journal data is left in browser storage.
+The three photo stories have supplied headlines and deks; the latest-news column still uses **TK** placeholders. Every byline is **Tony Hernandez**. Articles are static previews without story-detail pages.
+
+## Comments
+
+The original log continues below the news on a red background. Add and remove comments, with the same browser storage key preserving previous log entries. Comments are local to this browser, not public or synced. New browsers start with the original two log entries. Clearing browser data removes saved comments.
 
 ## Publishing
 
