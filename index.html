@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vibe Log</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">A little progress, every day</p>
+        <h1>Vibe Log</h1>
+        <p>Keep track of what you tried and what you learned.</p>
+      </header>
+
+      <form id="entry-form">
+        <label for="entry-text">What's on your mind?</label>
+        <textarea id="entry-text" name="entry" rows="4" maxlength="2000" placeholder="Today I learned…" required></textarea>
+        <button type="submit">Add entry</button>
+      </form>
+
+      <section aria-labelledby="entries-heading">
+        <h2 id="entries-heading">Your entries</h2>
+        <p id="empty-state">Your story starts here. Add your first entry above.</p>
+        <ul id="entries"></ul>
+      </section>
+      <p id="status" role="status"></p>
+    </main>
+  </body>
+</html>
