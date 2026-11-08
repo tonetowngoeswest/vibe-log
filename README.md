@@ -11,7 +11,7 @@ Open `index.html` in your browser, or serve this folder with `python3 -m http.se
 - `script.js` — saved comments, adding/removing entries, and keyboard focus for navigation back to the stories.
 - `theme.js` — dark mode and the saved appearance preference.
 - `Images/` — the three supplied story photographs.
-- `news/<story-slug>/index.html` — six complete static article pages.
+- `news/<story-slug>/index.html` — seven complete static article pages.
 - `news/articles.json` — article copy, source links, and image selections.
 - `scripts/build_news.py` — renders article pages and synchronizes homepage links and copy.
 - `article.js` — copies an article URL when supported by the browser.
@@ -19,11 +19,11 @@ Open `index.html` in your browser, or serve this folder with `python3 -m http.se
 
 ## Editing stories
 
-Every homepage headline links to a complete article under `news/<story-slug>/`. Articles use **Tony Hernandez** bylines, the supplied photos, and linked reporting sources. Analysis and evidence-checks are identified; injury reporting is explicitly dated. The Rice and peptide headlines/deks have been adjusted to reflect the available evidence.
+Every homepage headline links to a complete article under `news/<story-slug>/`. Articles use **Tony Hernandez** bylines, the supplied photos, and linked reporting sources. Analysis and evidence-checks are identified; injury reporting is explicitly dated. The Rice and peptide headlines/deks have been adjusted to reflect the available evidence. The Swift/Kloss culture story uses the supplied suite photograph and links to attendance reporting, Vogue, Fluently Forward commentary, and contemporary reporting on “Kissgate.” Its dek describes their public friendship rather than an unverified private relationship.
 
 Edit article text and sources in `news/articles.json`, then run `python3 scripts/build_news.py` to regenerate the static article pages and homepage story links. The homepage supplies the shared header, comments, and footer; rerun the generator after changing that shared markup. Both the generated HTML and JSON are committed, so GitHub Pages requires no build step. Relative asset paths preserve the `/vibe-log/` deployment prefix.
 
-Articles are approximately 200–400 words, with links to reporting sources. The photos are supplied file images, not evidence of the events described. Comments share the original browser-local log across the site.
+Articles are approximately 200–400 words, with natural inline attribution links instead of numbered citations or endnotes. Source records remain in the article JSON for editorial reference. The photos are supplied file images, not evidence of the events described. Comments share the original browser-local log across the site.
 
 ## Comments
 

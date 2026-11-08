@@ -8,26 +8,10 @@
     "paragraphs": [
       "Kansas City has reached the shopping-cart stage of its receiver problem. The need is obvious. The uncomfortable question is what the Chiefs should put on the checkout counter before trading closes at 4 p.m. Eastern on Nov. 10.",
       "A Nov. 4 analysis published by NFL.com identified Indianapolis' Josh Downs and Jacksonville's Brian Thomas Jr. as possible fits. It projected a fourth-round pick for Downs and a third-rounder for Thomas. Those are analyst estimates, not asking prices announced by the clubs, and neither player should be treated as a completed deal wearing a temporary disguise.",
-      "The appeal is different for each. Downs offers separation and an underneath option, but his slot work could overlap with Rashee Rice and Travis Kelce. Thomas brings a larger outside target and more contractual runway, although persuading another AFC contender to strengthen Kansas City would be its own contact sport.",
+      "In that assessment, the appeal is different for each. Downs offers separation and an underneath option, but his slot work could overlap with Rashee Rice and Travis Kelce. Thomas brings a larger outside target and more contractual runway, although persuading another AFC contender to strengthen Kansas City would be its own contact sport.",
       "The same analysis described a group disrupted by Tyquan Thornton's ankle injury and Rice's hamstring absence, with Xavier Worthy still searching for consistency. Adding a name is easy on a fan's imaginary depth chart. Adding a receiver who can learn the offense quickly enough to matter is considerably less tidy.",
       "Here is the judgment call: Kansas City should pay for a role, not a headline. An extra target helps only if he solves a problem the existing group cannot solve reliably. A bargain that duplicates three other players is still clutter, even when the receipt looks beautiful.",
       "For now, the reasonable expectation is a search, not a coronation. The deadline offers a chance to improve the menu. It does not guarantee that the kitchen suddenly becomes a five-star operation."
-    ],
-    "paragraphSources": [
-      [
-        1
-      ],
-      [
-        0
-      ],
-      [
-        0
-      ],
-      [
-        0
-      ],
-      [],
-      []
     ],
     "sources": [
       {
@@ -40,7 +24,7 @@
       }
     ],
     "sourceNotes": "Current 2026 sources verified. Trade targets and pick costs are explicitly analysis, not confirmed negotiations or official asking prices. Fewer than 200 words derived from NFL.com article; remaining prose is original analysis. No quotations used.",
-    "wordCount": 273,
+    "wordCount": 276,
     "image": {
       "src": "Images/znzv64zcbocvynvaedxv.webp",
       "alt": "Two Chiefs players on the field before a game",
@@ -48,7 +32,29 @@
       "trim": true
     },
     "published": "2026-11-08",
-    "author": "Tony Hernandez"
+    "author": "Tony Hernandez",
+    "paragraphLinks": [
+      {
+        "paragraph": 0,
+        "text": "trading closes at 4 p.m. Eastern on Nov. 10",
+        "url": "https://operations.nfl.com/calendar-events/nfl-important-dates"
+      },
+      {
+        "paragraph": 1,
+        "text": "analysis published by NFL.com",
+        "url": "https://amp.nfl.com/news/chiefs-trade-possibilities-which-receiver-would-be-the-best-fit-in-kansas-city"
+      },
+      {
+        "paragraph": 2,
+        "text": "In that assessment",
+        "url": "https://amp.nfl.com/news/chiefs-trade-possibilities-which-receiver-would-be-the-best-fit-in-kansas-city"
+      },
+      {
+        "paragraph": 3,
+        "text": "The same analysis",
+        "url": "https://amp.nfl.com/news/chiefs-trade-possibilities-which-receiver-would-be-the-best-fit-in-kansas-city"
+      }
+    ]
   },
   {
     "slug": "the-rise-of-dark-patrick",
@@ -58,7 +64,7 @@
     "dateLabel": "Nov. 8, 2026",
     "paragraphs": [
       "Patrick Mahomes does not need a cape, a sinister laugh or a new identity. The Chiefs need something considerably less cinematic: a quarterback who can turn an ugly possession into a useful one. Call that version of him Dark Patrick — an editorial nickname, not a report about his mood.",
-      "The distinction matters after Kansas City's 28-24 loss at Denver on Nov. 1. The Chiefs' game center credited Mahomes with 321 passing yards and three touchdowns. Yet the finish was unforgiving: Kansas City reached the 1-yard line, failed to score, committed a false start and surrendered a fourth-down sack. Impressive numbers did not buy a happy ending.",
+      "The distinction matters after Kansas City's 28-24 loss at Denver on Nov. 1. The Chiefs' game center credited Mahomes with 321 passing yards and three touchdowns. Denver's recap described an unforgiving finish: Kansas City reached the 1-yard line, failed to score, committed a false start and surrendered a fourth-down sack. Impressive numbers did not buy a happy ending.",
       "There is a blueprint for the less glamorous approach. In Kansas City's January 2024 playoff win at Buffalo, Mahomes completed 17 of 23 passes for 215 yards and two touchdowns. The Chiefs won 27-24. They did not need a passing-yardage fireworks show; they needed efficient possessions, timely scores and enough composure to survive the next swing.",
       "Mahomes has already addressed the villain business. At his Super Bowl LIX media appearance in February 2025, he framed the Chiefs' reputation around winning rather than embracing a bad-guy costume. The point was straightforward: Success can make a team unpopular without changing how it approaches the game.",
       "Here is the argument for dark mode now: Make the defense defend the boring stuff, too. Take the available completion. Avoid treating every stalled drive as an invitation to audition for a highlight reel. None of that guarantees a win, and it does not erase the responsibilities of the line, receivers or coaching staff.",
@@ -83,30 +89,37 @@
       }
     ],
     "sourceNotes": "Analysis clearly labeled. Nickname is identified as editorial framing, not a mental-health assessment or factual claim about temperament. Uses current Nov. 1, 2026 result plus explicitly dated 2024/2025 context. Original requested headline preserved. No invented quotes.",
-    "wordCount": 304,
+    "wordCount": 305,
     "image": {
       "src": "Images/hxsvgo4g7cgytmuqvmci.webp",
       "alt": "Black-and-white portrait of a Chiefs player in a hooded warmup top",
       "caption": "A Chiefs player before a game. File photo provided for this site.",
       "trim": true
     },
-    "paragraphSources": [
-      [],
-      [
-        0,
-        1
-      ],
-      [
-        2
-      ],
-      [
-        3
-      ],
-      [],
-      []
-    ],
     "published": "2026-11-08",
-    "author": "Tony Hernandez"
+    "author": "Tony Hernandez",
+    "paragraphLinks": [
+      {
+        "paragraph": 1,
+        "text": "Chiefs' game center",
+        "url": "https://www.chiefs.com/game-day/2026/reg-week8/chiefs-at-broncos/"
+      },
+      {
+        "paragraph": 1,
+        "text": "Denver's recap",
+        "url": "https://www.denverbroncos.com/news/they-won-us-the-game-tonight-broncos-channel-home-field-advantage-to-earn-28-24-win-vs-chiefs"
+      },
+      {
+        "paragraph": 2,
+        "text": "Kansas City's January 2024 playoff win at Buffalo",
+        "url": "https://www.chiefs.com/news/chiefs-defeat-bills-27-24-to-advance-to-sixth-consecutive-afc-championship-game"
+      },
+      {
+        "paragraph": 3,
+        "text": "Super Bowl LIX media appearance",
+        "url": "https://www.chiefs.com/video/patrick-mahomes-if-winning-football-game-makes-you-a-villain-we-re-going-to-keep-going-out-there-and-doing-it-chiefs-press-conference-super-bowl-lix"
+      }
+    ]
   },
   {
     "slug": "mahomes-arm-injury-update",
@@ -144,25 +157,104 @@
       "caption": "Chiefs game action. File photo provided for this site; not a photograph of the reported elbow incident.",
       "trim": false
     },
-    "paragraphSources": [
-      [
-        0
-      ],
-      [
-        0,
-        1
-      ],
-      [
-        0
-      ],
-      [],
-      [
-        2
-      ],
-      []
-    ],
     "published": "2026-11-08",
-    "author": "Tony Hernandez"
+    "author": "Tony Hernandez",
+    "paragraphLinks": [
+      {
+        "paragraph": 0,
+        "text": "returned to the field before halftime Sunday",
+        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+      },
+      {
+        "paragraph": 1,
+        "text": "Jets' official highlight",
+        "url": "https://www.newyorkjets.com/video/jets-chiefs-highlight-david-bailey-strip-sacks-patrick-mahomes-and-will-mcdonald-recovers-11-08-2026"
+      },
+      {
+        "paragraph": 1,
+        "text": "Yahoo Sports reported",
+        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+      },
+      {
+        "paragraph": 2,
+        "text": "Yahoo Sports' account",
+        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+      },
+      {
+        "paragraph": 4,
+        "text": "Chiefs' official pregame report",
+        "url": "https://www.chiefs.com/team/injury-report/"
+      }
+    ]
+  },
+  {
+    "slug": "taylor-swift-karlie-kloss-chiefs-game",
+    "title": "Taylor Swift attends the game with Karlie Kloss",
+    "dek": "Their Arrowhead appearance brings a public friendship back into focus, along with an old internet debate.",
+    "category": "Culture",
+    "dateLabel": "Nov. 8, 2026",
+    "published": "2026-11-08",
+    "author": "Tony Hernandez",
+    "paragraphs": [
+      "Taylor Swift brought a familiar friend to Arrowhead Stadium on Sunday, and the internet did what the internet does: opened roughly 47 emotional browser tabs. Karlie Kloss joined Swift as the Chiefs hosted the New York Jets, Us Weekly reported.",
+      "The appearance puts a well-documented friendship back in the stadium spotlight. Vogue featured the pair together in its March 2015 cover story, describing shared trips, busy careers and the ordinary pleasures of making time for friends. Their public history is substantial enough without asking every new photograph to deliver a plot twist.",
+      "For followers of online celebrity commentary, the reunion also brings an old vocabulary word back off the bench: Kissgate. The label grew around viral footage from a December 2014 concert that became a subject of intense fan interpretation.",
+      "The linked Fluently Forward post is an example of that commentary. It assembles photographs, clothing comparisons and readings of lyrics into a fan theory. Those connections show how an audience builds a narrative; they do not establish facts about the private lives of the people in it.",
+      "One detail needs correcting: The blog calls the event a 1989 concert. Contemporaneous reporting by Us Weekly identified it as The 1975's Dec. 4, 2014, show at New York's Terminal 5. Swift's representative rejected the kissing story at the time. A catchy nickname does not overrule that response.",
+      "Sunday's useful update is simpler: Swift and Kloss attended the same football game. Treating that as a public friendship moment leaves plenty to discuss, from the reunion itself to celebrity fandom's habit of turning seating arrangements into prestige television.",
+      "The Chiefs supplied the football. The suite supplied a reunion. The internet, predictably, arrived with its own playbook."
+    ],
+    "sources": [
+      {
+        "title": "Us Weekly: Swift attends Chiefs-Jets game with Karlie Kloss, Nov. 8, 2026",
+        "url": "https://www.usmagazine.com/sports/news/taylor-swift-attends-chiefs-game-with-karlie-kloss/"
+      },
+      {
+        "title": "Vogue: On the Road with Best Friends Taylor Swift and Karlie Kloss, March 2015",
+        "url": "https://www.vogue.com/article/taylor-swift-karlie-kloss-best-friends-march-2015-cover"
+      },
+      {
+        "title": "Fluently Forward: Fan commentary on Swift and Kloss",
+        "url": "https://www.fluentlyforward.com/home4/the-strongest-proof-and-evidence-that-taylor-swift-and-karlie-kloss-dated"
+      },
+      {
+        "title": "Us Weekly: Swift representative rejects concert kissing story, Dec. 5, 2014",
+        "url": "https://www.usmagazine.com/celebrity-news/news/taylor-swift-karlie-kloss-did-not-make-out-rep-calls-story-crap-2014512/"
+      }
+    ],
+    "paragraphLinks": [
+      {
+        "paragraph": 0,
+        "text": "Us Weekly reported",
+        "url": "https://www.usmagazine.com/sports/news/taylor-swift-attends-chiefs-game-with-karlie-kloss/"
+      },
+      {
+        "paragraph": 1,
+        "text": "Vogue featured the pair together",
+        "url": "https://www.vogue.com/article/taylor-swift-karlie-kloss-best-friends-march-2015-cover"
+      },
+      {
+        "paragraph": 3,
+        "text": "Fluently Forward post",
+        "url": "https://www.fluentlyforward.com/home4/the-strongest-proof-and-evidence-that-taylor-swift-and-karlie-kloss-dated"
+      },
+      {
+        "paragraph": 4,
+        "text": "Contemporaneous reporting by Us Weekly",
+        "url": "https://www.usmagazine.com/celebrity-news/news/taylor-swift-karlie-kloss-did-not-make-out-rep-calls-story-crap-2014512/"
+      }
+    ],
+    "sourceNotes": "Current attendance verified from opened Us Weekly Nov. 8 report and corroborated opened Elle Nov. 8 report (https://www.elle.com/culture/celebrities/a74360779/taylor-swift-karlie-kloss-family-travis-kelce-chiefs-jets-game-photos/). Original headline is supportable. Do not use requested lovers dek: unverified sensitive private relationship/sexuality inference. No identification or event verification from supplied photo itself. Blog opened and read, discussed only as a document of fan commentary; does not substantiate private romantic claims. Its assertion that Kissgate was at a 1989 concert is corrected using opened contemporaneous Us Weekly reporting, including representative's rejection. Under source word limits: roughly 50-70 words each from current Us Weekly and 2014 Us Weekly, about 40-50 words Vogue (limit 100), about 50-70 blog (limit 200). No verbatim quotes or song lyrics. '47 emotional browser tabs' is obvious comic exaggeration about the internet, not a reported count. Paragraph links are natural journalistic attribution, no superscripts or footnotes.",
+    "wordCount": 282,
+    "image": {
+      "src": "Images/swift-game-suite.webp",
+      "alt": "Spectators smiling and watching from a stadium suite",
+      "caption": "Reader-supplied photograph of spectators in a stadium suite.",
+      "trim": false,
+      "portrait": true,
+      "width": 483,
+      "height": 592
+    }
   },
   {
     "slug": "kelce-peptides-evidence",
@@ -198,22 +290,26 @@
       "caption": "Illustrative Chiefs file photo provided for this site. No allegation is made about anyone pictured.",
       "trim": true
     },
-    "paragraphSources": [
-      [],
-      [
-        2
-      ],
-      [
-        0
-      ],
-      [
-        1
-      ],
-      []
-    ],
     "published": "2026-11-08",
     "author": "Tony Hernandez",
-    "wordCount": 276
+    "wordCount": 276,
+    "paragraphLinks": [
+      {
+        "paragraph": 1,
+        "text": "Healthline describes",
+        "url": "https://www.healthline.com/health/wolverine-peptides"
+      },
+      {
+        "paragraph": 2,
+        "text": "Food and Drug Administration",
+        "url": "https://www.fda.gov/drugs/human-drug-compounding/certain-bulk-drug-substances-use-compounding-may-present-significant-safety-risks"
+      },
+      {
+        "paragraph": 3,
+        "text": "NFL-NFLPA performance-enhancing substances policy",
+        "url": "https://nflpaweb.blob.core.windows.net/website/Departments/Legal/2024-Policy-on-Performance-Enhancing-Substances-updated-Dec-2-2024.pdf"
+      }
+    ]
   },
   {
     "slug": "rashee-rice-receiver-problem",
@@ -228,21 +324,6 @@
       "Availability is the part that deserves particular attention. Kansas City's Oct. 23 injury report ruled Rice out against Seattle with hamstring and knee issues. The following week's report showed him practicing fully before the Denver game. That sequence matters when judging why a receiver's cumulative numbers look light.",
       "Our analysis: the Chiefs should demand more stability from the entire passing game without pretending Rice's injury interruptions are a character flaw or a statistical footnote. An offense cannot build its weekly identity around crossing its fingers, but neither should it throw useful production into the nearest rhetorical dumpster.",
       "The challenge is getting reliable contributions week after week. Rice can be part of the answer. The season totals alone do not establish that he is the whole problem."
-    ],
-    "paragraphSources": [
-      [],
-      [
-        0
-      ],
-      [
-        0
-      ],
-      [
-        1,
-        2
-      ],
-      [],
-      []
     ],
     "sources": [
       {
@@ -267,7 +348,29 @@
       "trim": true
     },
     "published": "2026-11-08",
-    "author": "Tony Hernandez"
+    "author": "Tony Hernandez",
+    "paragraphLinks": [
+      {
+        "paragraph": 1,
+        "text": "Chiefs' official statistics",
+        "url": "https://www.chiefs.com/team/players-roster/rashee-rice/splits/"
+      },
+      {
+        "paragraph": 2,
+        "text": "The splits",
+        "url": "https://www.chiefs.com/team/players-roster/rashee-rice/splits/"
+      },
+      {
+        "paragraph": 3,
+        "text": "Oct. 23 injury report",
+        "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+      },
+      {
+        "paragraph": 3,
+        "text": "following week's report",
+        "url": "https://www.chiefs.com/news/week-8-injury-report-chiefs-vs-broncos-2026"
+      }
+    ]
   },
   {
     "slug": "new-arrowhead-stadium",
@@ -304,23 +407,25 @@
       "caption": "Chiefs players on the field before a game. File photo provided for this site.",
       "trim": true
     },
-    "paragraphSources": [
-      [],
-      [
-        1,
-        2
-      ],
-      [
-        0
-      ],
-      [
-        0
-      ],
-      [],
-      []
-    ],
     "published": "2026-11-08",
     "author": "Tony Hernandez",
-    "wordCount": 302
+    "wordCount": 302,
+    "paragraphLinks": [
+      {
+        "paragraph": 1,
+        "text": "Kansas officials and the Chiefs announced an agreement",
+        "url": "https://www.kansascommerce.gov/chiefs/"
+      },
+      {
+        "paragraph": 2,
+        "text": "initial concept renderings",
+        "url": "https://www.chiefs.com/news/legacy-reimagined-kansas-city-chiefs-release-renderings-for-new-stadium-set-to-open-in-2031"
+      },
+      {
+        "paragraph": 3,
+        "text": "the team has said details are still being finalized",
+        "url": "https://www.chiefs.com/news/legacy-reimagined-kansas-city-chiefs-release-renderings-for-new-stadium-set-to-open-in-2031"
+      }
+    ]
   }
 ]

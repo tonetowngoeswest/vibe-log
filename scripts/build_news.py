@@ -1,4 +1,4 @@
-"""Render the six static articles and keep homepage story links in sync.
+"""Render the static articles and keep homepage story links in sync.
 
 Run from any directory with: python3 scripts/build_news.py
 No dependencies or server-side runtime are required by GitHub Pages.
@@ -49,14 +49,29 @@ for article in ARTICLES:
         raise ValueError(f'Expected one homepage card for {slug}; found {count}')
 
     paragraphs = []
-    mapping = article.get('paragraphSources', [[] for _ in article['paragraphs']])
     for index, text in enumerate(article['paragraphs']):
-        citations = ''.join(f'<sup><a href="#source-{i + 1}" aria-label="Source {i + 1}">[{i + 1}]</a></sup>' for i in mapping[index])
-        paragraphs.append(f'          <p>{e(text)}{citations}</p>')
-    sources = '\n'.join(f'            <li id="source-{i+1}"><a href="{e(source["url"])}">{e(source["title"])}</a></li>' for i, source in enumerate(article['sources']))
+        links = [link for link in article.get('paragraphLinks', []) if link['paragraph'] == index]
+        # Escape all copy and allow only declared, exact-text attribution links.
+        spans = []
+        for link in links:
+            position = text.find(link['text'])
+            if position < 0:
+                raise ValueError(f"Missing attribution phrase in {slug}: {link['text']}")
+            if not link['url'].startswith('https://'):
+                raise ValueError(f'Expected an HTTPS reporting link in {slug}')
+            spans.append((position, position + len(link['text']), link['url']))
+        rendered = ''
+        cursor = 0
+        for begin, end, url in sorted(spans):
+            if begin < cursor:
+                raise ValueError(f'Overlapping attribution phrases in {slug}')
+            rendered += e(text[cursor:begin]) + f'<a href="{e(url)}">{e(text[begin:end])}</a>'
+            cursor = end
+        rendered += e(text[cursor:])
+        paragraphs.append(f'          <p>{rendered}</p>')
     related = [other for other in ARTICLES if other['slug'] != slug][:3]
     related_cards = '\n'.join(f'''          <article class="related-story">
-            <a href="../{e(other['slug'])}/"><div class="related-image{' trim-image' if other['image']['trim'] else ''}"><img src="../../{e(other['image']['src'])}" alt="{e(other['image']['alt'])}" width="2048" height="1152" loading="lazy" /></div><p class="category">{e(other['category'])}</p><h3>{e(other['title'])}</h3></a>
+            <a href="../{e(other['slug'])}/"><div class="related-image{' trim-image' if other['image']['trim'] else ''}"><img src="../../{e(other['image']['src'])}" alt="{e(other['image']['alt'])}" width="{other['image'].get('width', 2048)}" height="{other['image'].get('height', 1152)}" loading="lazy" /></div><p class="category">{e(other['category'])}</p><h3>{e(other['title'])}</h3></a>
             <p class="byline">Tony Hernandez</p>
           </article>''' for other in related)
     photo = article['image']
@@ -84,8 +99,8 @@ for article in ARTICLES:
           <h1 id="article-title">{title}</h1>
           <p class="article-dek">{e(article['dek'])}</p>
         </div>
-        <figure class="article-figure">
-          <div class="article-image{' trim-image' if photo['trim'] else ''}"><img src="../../{e(photo['src'])}" alt="{e(photo['alt'])}" width="2048" height="1152" fetchpriority="high" /></div>
+        <figure class="article-figure{' portrait-figure' if photo.get('portrait') else ''}">
+          <div class="article-image{' trim-image' if photo['trim'] else ''}{' portrait-image' if photo.get('portrait') else ''}"><img src="../../{e(photo['src'])}" alt="{e(photo['alt'])}" width="{photo.get('width', 2048)}" height="{photo.get('height', 1152)}" fetchpriority="high" /></div>
           <figcaption>{e(photo['caption'])}</figcaption>
         </figure>
         <div class="article-layout">
@@ -102,9 +117,6 @@ for article in ARTICLES:
             <div class="article-body">
 {chr(10).join(paragraphs)}
             </div>
-            <section class="article-sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Reporting &amp; sources</h2><ol>
-{sources}
-            </ol><p>Reporting reflects the linked sources available for this dated edition. Analysis is identified above.</p></section>
           </div>
         </div>
       </article>
