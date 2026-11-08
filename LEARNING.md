@@ -71,3 +71,13 @@ Replaced all three latest-news headlines and deks with the supplied copy, preser
 ### Footer placement correction
 
 Moved the Tonetown sentence into the very bottom footer beside CHIEFS NEWS, replacing the independent-coverage sentence. Restored the original centered newsroom note beneath the lead story.
+
+## 2026-11-08 — Add six news article pages
+
+Created a shared article design following the supplied reference: large serif headline, dek, repeated homepage photography, caption, author rail, readable body text, sources, and related stories. Preserved the Chiefs banner, dark mode, comments, and Tonetown footer. Every homepage headline now links to a static page nested under `news/<story-slug>/`; photo-story images are linked too.
+
+Three writing agents researched and drafted two articles each. All six articles are approximately 200–400 words with Tony Hernandez bylines and dated sources. Analysis is distinguished from reporting. Updated the Rice framing to reflect production and availability, the peptide headline to an evidence-check without an invented allegation, and the injury headline to its verified return-to-play snapshot. File-photo captions avoid presenting supplied images as documentation of the reported events.
+
+Article content lives in `news/articles.json`. Run `python3 scripts/build_news.py` to produce the static pages and synchronize the homepage; the generator reuses the homepage header, footer, and comments. Nested pages use relative URLs that work under GitHub Pages' repository prefix. A separate article script adds a copy-link button only when supported.
+
+Validation: an independent review checked all seven pages for local asset/link/fragment paths, unique IDs, one primary heading, image alternative text, article word counts, and source references. Corrected mobile navigation selectors for nested pages and marked the home News link as a section location. Verified repeat generation produces identical output. Copy-link checks passed for supported, blocked, and unavailable clipboard APIs. All six routes, shared files, and photo assets returned HTTP 200 locally; `git diff --check` passed. Browser preview host was unavailable, so desktop/mobile visual appearance remains unverified.
