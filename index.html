@@ -3,37 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chiefs Brand Guide</title>
+    <meta name="description" content="An independent Chiefs news page by Tony Hernandez." />
+    <title>Chiefs News</title>
     <link rel="stylesheet" href="style.css" />
     <script src="theme.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-      <header>
-        <div class="header-copy">
-          <p class="eyebrow">A little progress, every day</p>
-          <h1>Chiefs Brand Guide</h1>
-          <p>Keep track of what you tried and what you learned.</p>
+    <a class="skip-link" href="#main">Skip to stories</a>
+    <header class="site-header">
+      <div class="masthead">
+        <div class="masthead-inner">
+          <p class="edition">Kansas City football<br><span>Independent coverage</span></p>
+          <a class="wordmark" href="./" aria-label="Chiefs News home">CHIEFS<span>NEWS</span></a>
+          <img class="masthead-logo" src="chiefs-logo.png" alt="Kansas City Chiefs logo" width="112" height="112" />
         </div>
-        <div class="header-actions">
-          <img class="team-logo" src="chiefs-logo.png" alt="Kansas City Chiefs logo" width="112" height="112" />
+      </div>
+      <div class="navigation">
+        <div class="navigation-inner">
+          <a class="compact-brand" href="./" aria-label="Chiefs News home"><img src="chiefs-logo.png" alt="" width="48" height="48" /><span>CHIEFS NEWS</span></a>
+          <nav aria-label="Main navigation">
+            <a href="#main" aria-current="page">News</a>
+            <a href="#team">Team</a>
+            <a href="#photos">Photos</a>
+            <a href="#latest">The Latest</a>
+          </nav>
           <button id="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode</button>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <form id="entry-form">
-        <label for="entry-text">What's on your mind?</label>
-        <textarea id="entry-text" name="entry" rows="4" maxlength="2000" placeholder="Today I learned…" required></textarea>
-        <button type="submit">Add entry</button>
-      </form>
+    <main id="main" tabindex="-1">
+      <div class="section-heading"><h1>News</h1><p>The stories. The team. The Kingdom.</p></div>
+      <div class="news-grid">
+        <section class="supporting-stories" aria-label="More stories">
+          <article class="story" id="team">
+            <figure class="story-image trim-image"><img src="Images/znzv64zcbocvynvaedxv.webp" alt="Two Chiefs players on the field before a game" width="2048" height="1152" /></figure>
+            <p class="category">Around the team</p>
+            <h2>TK</h2>
+            <p class="dek">TK — story summary to come.</p>
+            <p class="byline">Tony Hernandez</p>
+          </article>
+          <article class="story" id="photos">
+            <figure class="story-image trim-image"><img src="Images/hxsvgo4g7cgytmuqvmci.webp" alt="Black-and-white portrait of a Chiefs player in a hooded warmup top" width="2048" height="1152" loading="lazy" /></figure>
+            <p class="category">In focus</p>
+            <h2>TK</h2>
+            <p class="dek">TK — story summary to come.</p>
+            <p class="byline">Tony Hernandez</p>
+          </article>
+        </section>
 
-      <section aria-labelledby="entries-heading">
-        <h2 id="entries-heading">Your entries</h2>
-        <p id="empty-state">Your story starts here. Add your first entry above.</p>
-        <ul id="entries"></ul>
-      </section>
-      <p id="status" role="status"></p>
+        <section class="lead-column" aria-label="Lead story">
+          <article class="lead-story">
+            <figure class="story-image lead-image"><img src="Images/images_ReutersImages_mmsport_130_01m6pd7bj13xqtx2xmne.webp" alt="Chiefs quarterback number 15 carrying the football during a game" width="2048" height="1152" fetchpriority="high" /><figcaption>Chiefs football</figcaption></figure>
+            <p class="category">The big picture</p>
+            <h2>TK</h2>
+            <p class="dek">TK — the lead story summary will appear here.</p>
+            <p class="byline">Tony Hernandez</p>
+            <span class="story-rule" aria-hidden="true"></span>
+          </article>
+          <div class="editor-note"><span class="small-label">From the newsroom</span><p>A closer look at Kansas City football.</p></div>
+        </section>
+
+        <aside class="latest-column" id="latest" aria-labelledby="latest-heading">
+          <h2 id="latest-heading"><span aria-hidden="true"></span>The Latest</h2>
+          <article class="latest-story"><p class="category">Team news</p><h3>TK</h3><p class="dek">TK — story summary to come.</p><p class="byline">Tony Hernandez</p></article>
+          <article class="latest-story"><p class="category">From the field</p><h3>TK</h3><p class="dek">TK — story summary to come.</p><p class="byline">Tony Hernandez</p></article>
+          <article class="latest-story"><p class="category">Around the league</p><h3>TK</h3><p class="dek">TK — story summary to come.</p><p class="byline">Tony Hernandez</p></article>
+          <div class="coverage-note"><span class="small-label">Red. Gold. All in.</span><p>Your corner of the Kingdom.</p></div>
+        </aside>
+      </div>
     </main>
+    <footer class="site-footer"><a href="./">CHIEFS NEWS</a><p>Independent coverage by Tony Hernandez.</p><a href="#main">Back to top ↑</a></footer>
   </body>
 </html>
