@@ -30,6 +30,10 @@ Added “Sunday, November 8th: Hello, World!” followed by “I am watching the
 
 Changed the page background and primary buttons to Chiefs red (`#E31837`), with gold (`#FFB81C`) accents, card borders, and remove buttons. White cards and dark text keep entries readable. Hover colors provide feedback, and dark focus outlines stay visible on both the red background and white cards.
 
+## 2026-11-08 — Add the Chiefs logo and headline
+
+Changed the headline and browser title to “Chiefs Brand Guide.” Added a local PNG logo from https://www.logo.dev/search/brands/chiefs.com at the top right of the header. Flexbox keeps the logo beside the heading, and a responsive width lets it shrink on small screens. Alternative text identifies the logo for screen readers.
+
 ## Try it yourself
 
 1. Open `index.html` and add two entries.
