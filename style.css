@@ -8,7 +8,7 @@
   --line: #dedede;
   --soft: #f7f6f3;
   --accent: #b9102b;
-  --masthead-height: 164px;
+  --masthead-height: 124px;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--background);
@@ -100,7 +100,7 @@ h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; lette
   .site-footer { margin: 0 40px; }
 }
 @media (max-width: 640px) {
-  :root { --masthead-height: 120px; }
+  :root { --masthead-height: 90px; }
   .masthead-inner { padding: 0 20px; grid-template-columns: 1fr auto; gap: 12px; }
   .edition { display: none; }
   .wordmark { font-size: clamp(35px, 9vw, 54px); }
@@ -117,7 +117,7 @@ h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; lette
   .lead-column { order: -1; }
   .lead-image img { aspect-ratio: 16 / 11; }
   .lead-story h2 { font-size: 40px; }
-  .editor-note { display: none; }
+  .editor-note { margin-top: 24px; }
   .supporting-stories { padding: 28px 0 0; border: 0; border-top: 1px solid var(--line); }
   .latest-column { display: block; }
   #latest-heading { margin-bottom: 28px; }

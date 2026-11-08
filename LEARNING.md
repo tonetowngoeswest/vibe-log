@@ -61,3 +61,13 @@ Added a full-width red comments section below the news grid. Restored the origin
 Applied the supplied headlines and deks to the top-left, bottom-left, and center photo stories respectively, keeping Tony Hernandez bylines. Resized the lead headline to fit full story copy on desktop and mobile.
 
 Validation: comment checks passed for starter entries, whitespace rejection, literal text rendering, save/reload, removal, empty state, blocked storage, and malformed data. Checked section placement, form elements, assets, supplied headlines, six bylines, and `git diff --check`. Browser preview remains unavailable.
+
+## 2026-11-08 — Slim the banner and refresh the latest stories
+
+Reduced the expanded masthead from 164px to 124px on desktop and from 120px to 90px on mobile, keeping the existing 112px desktop and 70px mobile logos. The sticky offset follows the same height variable so the compact navigation still stays at the top.
+
+Replaced all three latest-news headlines and deks with the supplied copy, preserving Tony Hernandez bylines. Updated the centered note beneath the lead story with the Tonetown sentence. Verified the exact copy, unchanged logo sizes, and `git diff --check`. Browser visual review remains unavailable.
+
+### Footer placement correction
+
+Moved the Tonetown sentence into the very bottom footer beside CHIEFS NEWS, replacing the independent-coverage sentence. Restored the original centered newsroom note beneath the lead story.

@@ -15,7 +15,7 @@ Open `index.html` in your browser, or serve this folder with `python3 -m http.se
 
 ## Editing stories
 
-The three photo stories have supplied headlines and deks; the latest-news column still uses **TK** placeholders. Every byline is **Tony Hernandez**. Articles are static previews without story-detail pages.
+The three photo stories and the latest-news column use the supplied headlines and deks. Every byline is **Tony Hernandez**. Articles are static previews without story-detail pages.
 
 ## Comments
 
