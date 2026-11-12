@@ -51,7 +51,8 @@
       "trim": false,
       "width": 1600,
       "height": 1066
-    }
+    },
+    "homepage": "supporting"
   },
   {
     "slug": "patrick-brittany-mahomes-fourth-child",
@@ -240,7 +241,7 @@
         "url": "https://amp.nfl.com/news/chiefs-trade-possibilities-which-receiver-would-be-the-best-fit-in-kansas-city"
       }
     ],
-    "homepage": "supporting"
+    "archived": true
   },
   {
     "slug": "the-rise-of-dark-patrick",
@@ -310,70 +311,76 @@
   },
   {
     "slug": "mahomes-arm-injury-update",
-    "title": "Mahomes arm injury update: Quarterback returns after elbow scare",
-    "dek": "Mahomes returned before halftime against the Jets; a return to play is not a medical diagnosis.",
+    "title": "Mahomes practices fully after elbow scare ahead of Atlanta",
+    "dek": "Mahomes practiced fully Wednesday and says his right elbow is improving with treatment as the Chiefs prepare to visit Atlanta.",
     "category": "Injury update",
-    "dateLabel": "Nov. 8, 2026 · Halftime reporting snapshot",
+    "dateLabel": "Updated Nov. 12, 2026 · Based on Nov. 11 report",
     "paragraphs": [
-      "Patrick Mahomes returned to the field before halftime Sunday after a hit to his right elbow briefly sent the Chiefs quarterback to the sideline against the New York Jets. That is the encouraging part. The less satisfying part: Returning to a game does not, by itself, establish how an injury will feel afterward.",
-      "The scare came on a second-quarter sack by Jets linebacker David Bailey that forced a fumble. The Jets' official highlight identified Bailey's strip-sack and Will McDonald's recovery. Yahoo Sports reported that Mahomes went to the sideline holding his right arm, threw there and returned for Kansas City's next possession.",
-      "On that drive, Mahomes completed a 12-yard pass and scrambled for 7 yards, according to Yahoo Sports' account. Kansas City reached halftime leading 14-12. Coach Andy Reid told CBS at the break that Mahomes had hurt his elbow and that it was sore, but that he had come back.",
-      "Those are observations and an initial coaching update, not a diagnosis. The sources reviewed for this halftime snapshot did not establish a specific elbow injury, imaging result or recovery timetable. A grimace can set off a thousand nervous group chats; it cannot answer those medical questions.",
-      "The Chiefs' official pregame report had listed Mahomes with a knee issue, full participation throughout the practice week and no game designation. That report predates Sunday's elbow scare. It should not be treated as evidence that the new concern has been evaluated or resolved.",
-      "For now, the useful update is narrow: Mahomes returned and continued playing before halftime. Anything more definitive should come from an attributed team update or subsequent reporting. Chiefs fans can exhale without pretending the medical chart has suddenly become public."
+      "Patrick Mahomes was a full participant in the Chiefs’ Wednesday practice after hurting his right elbow against the Jets on Sunday. Kansas City’s Week 10 injury report supplies the latest confirmed practice update, and it is encouraging news as the Chiefs prepare to visit Atlanta.",
+      "The official report lists Mahomes with knee and right elbow issues and marks his Nov. 11 participation as full. As of this update, the team had not published Thursday’s participation report or a final injury designation for the Atlanta game.",
+      "Speaking Wednesday, Mahomes said his elbow was improving with treatment at the facility and at home, according to KCTV5’s coverage of his news conference. He said swelling had affected how comfortable he felt throwing during the Jets game and credited trainer Julie Frymyer with helping reduce it.",
+      "Mahomes also said he felt encouraged after speaking with doctors following an MRI. He described pain management as the focus going forward, with treatment continuing throughout the week as he works toward Sunday’s game.",
+      "The scare began when Jets pass rusher David Bailey hit Mahomes’ throwing arm late in the first half of Kansas City’s Nov. 8 win. In its Monday report, KCTV5 noted that Andy Reid had described Mahomes as day to day, with rehabilitation and soreness management ahead.",
+      "Wednesday’s full practice gives Kansas City a newer checkpoint than Reid’s initial assessment. Mahomes is preparing for Atlanta while continuing treatment. The team’s remaining injury reports will provide the next updates before Sunday’s game."
     ],
     "sources": [
       {
-        "title": "Yahoo Sports: Mahomes returns after hit to right elbow, Nov. 8, 2026",
-        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+        "title": "Chiefs official Week 10 injury report: Wednesday, Nov. 11, 2026",
+        "url": "https://www.chiefs.com/news/week-10-injury-report-chiefs-vs-falcons-2026"
       },
       {
-        "title": "Jets official highlight of Bailey strip-sack and McDonald recovery",
-        "url": "https://www.newyorkjets.com/video/jets-chiefs-highlight-david-bailey-strip-sacks-patrick-mahomes-and-will-mcdonald-recovers-11-08-2026"
+        "title": "KCTV5: Mahomes discusses elbow improvement and treatment, Nov. 11, 2026",
+        "url": "https://www.kctv5.com/2026/11/11/chiefs-mahomes-expresses-optimism-after-elbow-injury-scare/"
       },
       {
-        "title": "Chiefs official pregame injury report",
-        "url": "https://www.chiefs.com/team/injury-report/"
+        "title": "KCTV5: Reid describes Mahomes as day to day, Nov. 9, 2026",
+        "url": "https://www.kctv5.com/2026/11/09/andy-reid-says-patrick-mahomes-is-day-to-day-after-injury-against-jets/"
       }
     ],
-    "sourceNotes": "The arm scare is real current news, verified via Nov. 8 Yahoo Sports reporting plus Jets official highlight. Yahoo search result provided full article text; opening direct page returned accessibility error. Exact halftime snapshot avoids claiming game final or later medical outcome. Removed undated BREAKING framing and added confirmed return to headline/dek. Chiefs official injury report is explicitly pregame, not asserted as diagnosis of the elbow. All facts within source word limits and no direct quotations.",
-    "wordCount": 281,
+    "sourceNotes": "Latest confirmed practice entry reviewed Nov. 12 is Wednesday Nov. 11: knee/right elbow, FP. Thursday and Friday columns and final game designation were not populated; no Thursday practice participation, official clearance or questionable designation is asserted. Wednesday comments are attributed to direct KCTV5 reporting. Monday day-to-day language is explicitly older context. MRI discussion is limited to Mahomes’ reported reaction after consulting doctors; no structural diagnosis, no-damage conclusion, ligament clearance or recovery guarantee is claimed. Each source contributes fewer than 200 words of paraphrase. No direct quotations. Original publication date and URL retained; updated date is Nov. 12.",
+    "wordCount": 246,
     "image": {
-      "src": "Images/images_ReutersImages_mmsport_130_01m6pd7bj13xqtx2xmne.webp",
-      "alt": "Chiefs quarterback number 15 carrying the football during a game",
-      "caption": "Chiefs game action. File photo provided for this site; not a photograph of the reported elbow incident.",
-      "trim": false
+      "src": "Images/mahomes-jets-warmup.jpg",
+      "alt": "Patrick Mahomes in a black Chiefs warmup hoodie before the Jets game",
+      "caption": "Patrick Mahomes warms up before the Chiefs face the Jets on Nov. 8, 2026.",
+      "credit": "Photo: Steve Sanders / Kansas City Chiefs.",
+      "sourceUrl": "https://www.chiefs.com/photos/photos-top-shots-from-regular-season-week-9-jets-vs-chiefs",
+      "downloadUrl": "https://static.clubs.nfl.com/image/upload/t_new_photo_album/f_auto/chiefs/k41kulgmpgin0iktgg3w.jpg",
+      "trim": false,
+      "width": 1280,
+      "height": 720
     },
     "published": "2026-11-08",
     "author": "Tony Hernandez",
     "paragraphLinks": [
       {
         "paragraph": 0,
-        "text": "returned to the field before halftime Sunday",
-        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+        "text": "Kansas City’s Week 10 injury report",
+        "url": "https://www.chiefs.com/news/week-10-injury-report-chiefs-vs-falcons-2026"
       },
       {
         "paragraph": 1,
-        "text": "Jets' official highlight",
-        "url": "https://www.newyorkjets.com/video/jets-chiefs-highlight-david-bailey-strip-sacks-patrick-mahomes-and-will-mcdonald-recovers-11-08-2026"
-      },
-      {
-        "paragraph": 1,
-        "text": "Yahoo Sports reported",
-        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+        "text": "The official report",
+        "url": "https://www.chiefs.com/news/week-10-injury-report-chiefs-vs-falcons-2026"
       },
       {
         "paragraph": 2,
-        "text": "Yahoo Sports' account",
-        "url": "https://sports.yahoo.com/nfl/breaking-news/article/patrick-mahomes-returns-to-jets-chiefs-game-after-scary-hit-to-right-elbow-193349449.html"
+        "text": "KCTV5’s coverage of his news conference",
+        "url": "https://www.kctv5.com/2026/11/11/chiefs-mahomes-expresses-optimism-after-elbow-injury-scare/"
+      },
+      {
+        "paragraph": 3,
+        "text": "Mahomes also said",
+        "url": "https://www.kctv5.com/2026/11/11/chiefs-mahomes-expresses-optimism-after-elbow-injury-scare/"
       },
       {
         "paragraph": 4,
-        "text": "Chiefs' official pregame report",
-        "url": "https://www.chiefs.com/team/injury-report/"
+        "text": "its Monday report",
+        "url": "https://www.kctv5.com/2026/11/09/andy-reid-says-patrick-mahomes-is-day-to-day-after-injury-against-jets/"
       }
     ],
-    "homepage": "lead"
+    "homepage": "lead",
+    "updated": "2026-11-12"
   },
   {
     "slug": "taylor-swift-karlie-kloss-chiefs-game",
