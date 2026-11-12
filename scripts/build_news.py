@@ -16,10 +16,18 @@ if len({article['slug'] for article in ARTICLES}) != len(ARTICLES):
     raise ValueError('Article slugs must be unique')
 for article in ARTICLES:
     date.fromisoformat(article['published'])
+    date.fromisoformat(article.get('updated', article['published']))
     if article.get('homepage') not in (None, 'lead', 'supporting'):
         raise ValueError(f"Unknown homepage placement for {article['slug']}")
-ORDERED_ARTICLES = sorted(ARTICLES, key=lambda article: article['published'], reverse=True)
-LATEST_ARTICLES = [article for article in ORDERED_ARTICLES if not article.get('homepage')][:LATEST_LIMIT]
+    if article.get('archived') and article.get('homepage'):
+        raise ValueError(f"An archived article cannot be featured: {article['slug']}")
+ORDERED_ARTICLES = sorted(ARTICLES, key=lambda article: article.get('updated', article['published']), reverse=True)
+ACTIVE_ARTICLES = [article for article in ORDERED_ARTICLES if not article.get('archived')]
+LATEST_ARTICLES = [article for article in ACTIVE_ARTICLES if not article.get('homepage')][:LATEST_LIMIT]
+SUPPORTING_ARTICLES = [article for article in ARTICLES if article.get('homepage') == 'supporting']
+LEAD_ARTICLES = [article for article in ARTICLES if article.get('homepage') == 'lead']
+if len(SUPPORTING_ARTICLES) != 2 or len(LEAD_ARTICLES) != 1:
+    raise ValueError('The homepage needs two supporting stories and one lead story')
 home_path = ROOT / 'index.html'
 home = home_path.read_text()
 
@@ -63,39 +71,46 @@ def story_card(article, prefix='', archive=False):
             <div class="story-summary"><p class="category">{e(article['category'])}</p>
             <{heading}><a href="{target}">{e(article['title'])}</a></{heading}>
             <p class="dek">{e(article['dek'])}</p>
-            <p class="byline">{e(article['author'])} <span aria-hidden="true">·</span> <time datetime="{article['published']}">{e(article['dateLabel'])}</time></p></div>
+            <p class="byline">{e(article['author'])} <span aria-hidden="true">·</span> <time datetime="{article.get('updated', article['published'])}">{e(article['dateLabel'])}</time></p></div>
           </article>'''
 
 
-latest_cards = '\n'.join(story_card(article) for article in LATEST_ARTICLES)
-home, count = re.subn(r'<!-- latest-stories:start -->.*?<!-- latest-stories:end -->',
-                     lambda match: f'<!-- latest-stories:start -->\n{latest_cards}\n          <!-- latest-stories:end -->', home, flags=re.S)
-if count != 1:
-    raise ValueError('Expected one generated Latest section')
-homepage_slugs = {article['slug'] for article in LATEST_ARTICLES}
-homepage_slugs.update(article['slug'] for article in ARTICLES if article.get('homepage'))
+def featured_card(article, anchor=None, lead=False):
+    photo = article['image']
+    title = e(article['title'])
+    target = f'news/{e(article["slug"])}/'
+    css_class = 'lead-story' if lead else 'story'
+    anchor_attribute = f' id="{e(anchor)}"' if anchor else ''
+    image_class = 'story-image lead-image' if lead else 'story-image'
+    image_class += ' trim-image' if photo.get('trim') else ''
+    image_class += ' portrait-thumbnail' if photo.get('portrait') else ''
+    image_loading = 'fetchpriority="high"' if lead else 'loading="lazy"'
+    caption = f'<figcaption>{e(article["category"])}</figcaption>' if lead else ''
+    rule = '\n            <span class="story-rule" aria-hidden="true"></span>' if lead else ''
+    return f'''          <article class="{css_class}"{anchor_attribute} data-story="{e(article['slug'])}">
+            <a class="story-photo-link" href="{target}" aria-label="Read: {title}"><figure class="{image_class}"><img src="{e(photo['src'])}" alt="{e(photo['alt'])}" width="{photo.get('width', 2048)}" height="{photo.get('height', 1152)}" {image_loading} />{caption}</figure></a>
+            <p class="category">{e(article['category'])}</p>
+            <h2><a href="{target}">{title}</a></h2>
+            <p class="dek">{e(article['dek'])}</p>
+            <p class="byline">{e(article['author'])}</p>{rule}
+          </article>'''
+
+
+def render_home_section(name, content):
+    global home
+    pattern = rf'<!-- {name}:start -->.*?<!-- {name}:end -->'
+    home, count = re.subn(pattern, lambda match: f'<!-- {name}:start -->\n{content}\n          <!-- {name}:end -->', home, flags=re.S)
+    if count != 1:
+        raise ValueError(f'Expected one generated {name} section')
+
+
+render_home_section('supporting-stories', '\n'.join(featured_card(article, anchor=anchor) for article, anchor in zip(SUPPORTING_ARTICLES, ('team', 'photos'))))
+render_home_section('lead-story', featured_card(LEAD_ARTICLES[0], lead=True))
+render_home_section('latest-stories', '\n'.join(story_card(article) for article in LATEST_ARTICLES))
 
 for article in ARTICLES:
     slug = article['slug']
     title = e(article['title'])
-    target = f'news/{slug}/'
-    pattern = rf'(<article\b[^>]*data-story="{re.escape(slug)}"[^>]*>)(.*?)(</article>)'
-
-    def update_card(match):
-        content = match[2]
-        content = re.sub(r'<h([23])>.*?</h\1>', lambda m: f'<h{m[1]}><a href="{target}">{title}</a></h{m[1]}>', content, count=1, flags=re.S)
-        content = re.sub(r'<p class="dek">.*?</p>', lambda m: f'<p class="dek">{e(article["dek"])}</p>', content, count=1, flags=re.S)
-        content = re.sub(r'<p class="category">.*?</p>', lambda m: f'<p class="category">{e(article["category"])}</p>', content, count=1, flags=re.S)
-        # Unwrap an existing image link before rendering, so reruns are idempotent.
-        content = re.sub(r'<a class="story-photo-link"[^>]*>(<figure.*?</figure>)</a>', r'\1', content, flags=re.S)
-        content = re.sub(r'(<figure.*?</figure>)', lambda m: f'<a class="story-photo-link" href="{target}" aria-label="Read: {title}">{m[1]}</a>', content, count=1, flags=re.S)
-        return match[1] + content + match[3]
-
-    home, count = re.subn(pattern, update_card, home, flags=re.S)
-    expected = 1 if slug in homepage_slugs else 0
-    if count != expected:
-        raise ValueError(f'Expected {expected} homepage cards for {slug}; found {count}')
-
     paragraphs = []
     for index, text in enumerate(article['paragraphs']):
         links = [link for link in article.get('paragraphLinks', []) if link['paragraph'] == index]
@@ -117,13 +132,19 @@ for article in ARTICLES:
             cursor = end
         rendered += e(text[cursor:])
         paragraphs.append(f'          <p>{rendered}</p>')
-    related = [other for other in ORDERED_ARTICLES if other['slug'] != slug][:3]
+    related = [other for other in ACTIVE_ARTICLES if other['slug'] != slug][:3]
     related_cards = '\n'.join(f'''          <article class="related-story">
             <a href="../{e(other['slug'])}/"><div class="related-image{' trim-image' if other['image']['trim'] else ''}"><img src="../../{e(other['image']['src'])}" alt="{e(other['image']['alt'])}" width="{other['image'].get('width', 2048)}" height="{other['image'].get('height', 1152)}" loading="lazy" /></div><p class="category">{e(other['category'])}</p><h3>{e(other['title'])}</h3></a>
             <p class="byline">Tony Hernandez</p>
           </article>''' for other in related)
     photo = article['image']
     photo_style = f' style="--photo-width: {int(photo.get("width", 600))}px"' if photo.get('portrait') else ''
+    photo_credit = ''
+    if photo.get('credit'):
+        if not photo.get('sourceUrl', '').startswith('https://'):
+            raise ValueError(f'Expected an HTTPS photo source for {slug}')
+        photo_credit = f' <a href="{e(photo["sourceUrl"])}">{e(photo["credit"])}</a>'
+    archive_notice = '\n          <p class="archive-notice">From the archive. This story reflects reporting at its original publication date.</p>' if article.get('archived') else ''
     read_minutes = max(1, round(article['wordCount'] / 200))
     page = f'''<!doctype html>
 <html lang="en">
@@ -146,11 +167,11 @@ for article in ARTICLES:
           <a class="back-to-news" href="../../">← All news</a>
           <p class="category">{e(article['category'])}</p>
           <h1 id="article-title">{title}</h1>
-          <p class="article-dek">{e(article['dek'])}</p>
+          <p class="article-dek">{e(article['dek'])}</p>{archive_notice}
         </div>
         <figure class="article-figure{' portrait-figure' if photo.get('portrait') else ''}"{photo_style}>
           <div class="article-image{' trim-image' if photo['trim'] else ''}{' portrait-image' if photo.get('portrait') else ''}"><img src="../../{e(photo['src'])}" alt="{e(photo['alt'])}" width="{photo.get('width', 2048)}" height="{photo.get('height', 1152)}" fetchpriority="high" /></div>
-          <figcaption>{e(photo['caption'])}</figcaption>
+          <figcaption>{e(photo['caption'])}{photo_credit}</figcaption>
         </figure>
         <div class="article-layout">
           <aside class="author-rail" aria-label="About the author">
@@ -161,7 +182,7 @@ for article in ARTICLES:
             <p class="author-note">Independent coverage.<br>Red and gold perspective.</p>
           </aside>
           <div class="article-copy">
-            <div class="article-tools"><time datetime="{article['published']}">{e(article['dateLabel'])}</time><span>{read_minutes} min read</span><button type="button" id="copy-article-link" hidden>Copy link</button></div>
+            <div class="article-tools"><time datetime="{article.get('updated', article['published'])}">{e(article['dateLabel'])}</time><span>{read_minutes} min read</span><button type="button" id="copy-article-link" hidden>Copy link</button></div>
             <p id="article-status" role="status"></p>
             <div class="article-body">
 {chr(10).join(paragraphs)}

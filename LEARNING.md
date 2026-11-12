@@ -1,5 +1,17 @@
 # Learning notes
 
+## 2026-11-12 — Refresh the lead and promote Josh Downs
+
+Moved Josh Downs into the upper-left feature and marked the pre-deadline WR analysis archive-only. Archived stories keep their article URLs and appear in the archive, with a notice identifying their original reporting date. They are excluded from The Latest and related recommendations. The Latest still has four stories, with the next eligible story filling the opening left by Downs.
+
+Rewrote the center Mahomes story around the latest available official practice report: full participation Wednesday, Nov. 11, with knee/right-elbow issues listed. The headline, dek and full article now reflect that update. Kept the original Nov. 8 publication date and added a Nov. 12 update date. Wednesday comments on improvement, treatment and his reaction to MRI results are attributed to KCTV5; the article does not claim Thursday practice participation or a final game designation.
+
+Replaced the lead photograph with a verified image from the Chiefs' Nov. 8 Jets gallery, credited to Steve Sanders / Kansas City Chiefs. The caption identifies it as a pregame warmup photograph. Feature copy and images now render from the JSON, so changing a story or photograph updates both the homepage and article.
+
+Validation: all 12 pages passed checks for exact feature placement, four Latest stories, archive retention, matching lead copy/photo, local links/fragments, image attributes and repeated generation. A temporary build confirmed an archived story cannot reappear even with a future update date, a new story automatically rolls the oldest Latest item out, and photo changes propagate to the lead. Independent review found no remaining copy or generator issues. `git diff --check` passed.
+
+The homepage, archive, Downs story, refreshed Mahomes story, archived WR story and new image served the expected file contents with HTTP 200 locally. Browser visual review remains unavailable because the browser access host could not be reached.
+
 ## 2026-11-12 — Add three stories and an automatic archive
 
 Added sourced Josh Downs, Mahomes family and Harrison Butker stories with the three supplied photographs, full article pages, Tony Hernandez bylines and natural inline attribution. The Butker story reflects Andy Reid's decision to keep him kicking against Atlanta this week. The large Downs photograph is published as a smaller copy for faster loading; the original uploads are preserved.
