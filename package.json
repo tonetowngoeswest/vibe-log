@@ -1,0 +1,34 @@
+{
+  "name": "chiefs-news",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts components/editor/*.test.ts && node --test scripts/backend/database.test.mjs",
+    "test:db": "node --test scripts/backend/database.test.mjs",
+    "test:integration": "node tests/http.integration.mjs",
+    "backend:bootstrap": "node scripts/backend/bootstrap-admin.mjs",
+    "backend:import": "node scripts/backend/import-content.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.119.0",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.16",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tsx": "4.23.15",
+    "supabase": "3.1.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,5 +1,19 @@
 # Learning notes
 
+## 2026-11-12 — Add accounts, a newsroom and shared discussions
+
+Added a Next.js application with Supabase Auth/Postgres while keeping the existing static GitHub Pages site available during migration. Imported the ten articles and seven current homepage placements through idempotent setup commands. The database becomes the source of truth after import; redeploying or rerunning the importer preserves editorial changes.
+
+Readers can sign up, verify their email, log in, recover their password and post to individual story discussions or the homepage conversation. Public display names are separate from private emails. Server checks and database policies protect comment ownership, staff permissions and the first administrator's required password change. Previously private browser-local notes remain private and can be exported from their original origin.
+
+Editors can edit headlines, deks and paragraph blocks, maintain inline reporting links, save drafts, preview privately, publish and restore earlier revisions into a new draft. The homepage board supports dragging and keyboard controls for two left stories, the center lead and four Latest slots. Layout and story publishing are independent, with transaction/version checks preventing partial layouts or silent overwrites.
+
+Verification includes render, layout movement, validation, redirect migration and real PostgreSQL authorization tests, plus actual local Supabase Auth/email/REST and application HTTP flows with multiple accounts. Fixed unsafe return-path control characters and a read-after-save concurrency race found during independent review. Browser visual inspection was unavailable because the browser access host could not be reached.
+
+The complete local HTTP suite passed 14 scenarios, and two additional flows followed actual Mailpit verification/recovery emails through Supabase and the app's PKCE callback. PostgreSQL tests also verified that deleting an editor anonymizes revision attribution without changing revision content or breaking published stories. Authentication callback URLs are excluded from development request logs.
+
+Hosted launch still needs Vercel/Supabase account access and a verified email-sending domain. Both connected-service integrations were disabled by the workspace administrator. Added a deployment guide, environment template, versioned migrations and a separate legacy redirect generator; no hosted service or domain was purchased, and credentials remain untracked.
+
 ## 2026-11-12 — Refresh the lead and promote Josh Downs
 
 Moved Josh Downs into the upper-left feature and marked the pre-deadline WR analysis archive-only. Archived stories keep their article URLs and appear in the archive, with a notice identifying their original reporting date. They are excluded from The Latest and related recommendations. The Latest still has four stories, with the next eligible story filling the opening left by Downs.
