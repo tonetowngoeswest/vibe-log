@@ -1,46 +1,65 @@
 # Chiefs News
 
-An independent football news homepage by Tony Hernandez, built with plain HTML, CSS, and JavaScript. The layout uses the supplied banner and news-page screenshots as references.
+A Kansas City football publication with a Next.js application, Supabase accounts/database, an editor dashboard and shared reader comments. The current Chiefs red/gold design, ten story URLs, photos, source attribution and dark mode are preserved.
 
-Open `index.html` in your browser, or serve this folder with `python3 -m http.server 8000` and visit `http://localhost:8000`.
+The original static site remains in this repository for the existing GitHub Pages deployment. The backend application runs on a server-capable host such as Vercel. Keep the legacy site available until the new deployment is verified.
 
-## Files
+## Run locally
 
-- `index.html` — masthead, navigation, lead story, supporting stories, and latest headlines.
-- `style.css` — Chiefs red and gold branding, responsive news columns, sticky banner, and dark theme.
-- `script.js` — saved comments, adding/removing entries, and keyboard focus for navigation back to the stories.
-- `theme.js` — dark mode and the saved appearance preference.
-- `Images/` — photographs used by the published stories.
-- `news/<story-slug>/index.html` — complete static article pages.
-- `news/index.html` — the complete story archive, newest first.
-- `news/articles.json` — article copy, source links, and image selections.
-- `scripts/build_news.py` — renders article pages and synchronizes homepage links and copy.
-- `article.js` — copies an article URL when supported by the browser.
-- `LEARNING.md` — notes on each change.
+Requires Node.js 24 LTS and Docker Desktop for local Supabase.
 
-## Editing stories
+```sh
+npm ci
+npx supabase start
+cp .env.example .env.local
+```
 
-Every homepage headline links to a complete article under `news/<story-slug>/`. Articles use **Tony Hernandez** bylines, the supplied photos, and linked reporting sources. Analysis and evidence-checks are identified; injury reporting is explicitly dated. The Rice and peptide headlines/deks have been adjusted to reflect the available evidence. The Swift/Kloss culture story uses the supplied suite photograph and links to attendance reporting, Vogue, Fluently Forward commentary, and contemporary reporting on “Kissgate.” Its dek describes their public friendship rather than an unverified private relationship.
+Configure `.env.local` using the local instance credentials and administrator setup values, then run:
 
-Edit article text and sources in `news/articles.json`, then run `python3 scripts/build_news.py` to regenerate the static article pages, homepage and archive. The homepage supplies the shared header, comments, and footer; rerun the generator after changing that shared markup. Both the generated HTML and JSON are committed, so GitHub Pages requires no build step. Relative asset paths preserve the `/vibe-log/` deployment prefix.
+```sh
+npm run backend:import
+npm run backend:bootstrap
+npm run dev
+```
 
-The JSON is the editorial store: keep every published story there. The generator sorts by `updated` date when supplied, otherwise `published`, and automatically shows only the four newest eligible stories in **The Latest** (`LATEST_LIMIT` in the generator). For stories with the same date, their order in the JSON breaks the tie. Set `homepage` to `lead` for the center story or `supporting` for the two left-column stories; supporting stories follow JSON order. Their copy, links and photographs are all generated from that record, and they are excluded from The Latest. Set `archived: true` and remove `homepage` to keep an article only in the archive, excluding it from The Latest and related recommendations. Every article retains its original URL. Add future stories to the JSON without creating homepage cards or deleting old records. This works on the current static hosting; a database or admin editor can be added in a later backend phase.
+Open `http://localhost:3000`. The initial `admin` login uses the password supplied privately during bootstrap and requires a new password before editorial actions. Without backend credentials, the application explicitly displays a read-only preview of the original stories; it does not simulate authentication or saved edits.
 
-Articles are approximately 200–400 words, with natural inline attribution links instead of numbered citations or endnotes. Source records remain in the article JSON for editorial reference. Supplied file photos are captioned as such; sourced editorial photos include their credit and source link. Comments share the original browser-local log across the site.
+See [Backend setup](docs/BACKEND_SETUP.md) for local verification emails, Supabase configuration, Resend SMTP, Vercel deployment, redirects, persistence and recovery. Public signup requires a verified email sender before launch.
 
-## Comments
+## Readers and staff
 
-The original log continues below the news on a red background. Add and remove comments, with the same browser storage key preserving previous log entries. Comments are local to this browser, not public or synced. New browsers start with the original two log entries. Clearing browser data removes saved comments.
+Readers sign up with email, password and a public display name. Verification and password recovery use email; public comments never expose email addresses. Every article has its own discussion, and the homepage has a separate general conversation. Comments are shared across accounts and devices, with ownership and moderation enforced in the database.
 
-## Publishing
+Editors use `/editor/` to edit headlines, deks and paragraph blocks with natural inline attribution links. Save and preview a draft before publishing. Each save creates an immutable revision; restoring history loads it into a new draft. Conflicting saves preserve the unsaved form rather than replacing someone else's work.
 
-Publish the repository root in GitHub Pages. Set **Settings → Pages → Branch** to **main** and **/ (root)** so future merged changes deploy automatically. The site was previously configured to publish `chiefs-brand-guide`, which can leave it behind `main`.
+The homepage editor controls seven positions: upper left, lower left, center lead and four Latest stories. Drag between slots to swap, replace a story from the archive pool, or use the keyboard controls. Layouts publish together and require seven unique stories. Story publishing and arrangement publishing are independent; changing the layout never publishes another story's pending draft.
 
-## What I learned
+Admins additionally manage reader/editor/admin roles at `/admin/users/`. The last administrator cannot be demoted. Server checks and database policies enforce every permission.
 
-- Semantic HTML gives stories, navigation, and headings meaningful structure.
-- CSS Grid supports a lead story, secondary stories, and a latest-news column.
-- A sticky header with a negative top offset lets the large masthead scroll away while its navigation remains visible, without JavaScript scroll handlers.
-- Media queries bring the lead story first on mobile and stack the other columns.
-- CSS variables let dark mode update backgrounds, text, and borders consistently.
-- A saved browser preference persists when local storage is available.
+## Data and files
+
+- `app/` — server-rendered pages, account flows, editor/admin pages and API routes.
+- `components/` — article layouts, reader comments, account forms and newsroom controls.
+- `lib/` — server-only authentication/data access, public types and input validation.
+- `supabase/` — local service configuration and versioned SQL migrations and authorization rules.
+- `scripts/backend/` — idempotent import, one-time administrator setup and PostgreSQL tests.
+- `public/` — story photo assets and the Chiefs logo, retaining their existing paths.
+- `news/articles.json` — original editorial content and sources, used as the initial migration snapshot.
+- `index.html`, `news/*/index.html`, `scripts/build_news.py` — legacy static site files; these do not overwrite the live database.
+
+Once imported, the database is the source of truth. Deployments and repeated imports preserve existing edits, layouts, accounts and comments. Passwords, session tokens and service keys are never committed. Published content is rendered from the database, including article metadata and link previews.
+
+Original browser-local notes under `vibe-log-entries` are not uploaded or assigned to users. `/legacy-export/` explains private export; the old Pages host has `export-comments.html` to read notes from their original origin. Exporting never removes them.
+
+## Checks
+
+```sh
+npm run typecheck
+npm test
+npm run build
+npm run test:integration
+```
+
+Integration tests require local Supabase and a running development server. They refuse hosted URLs, use temporary reader accounts, and restore article/layout content afterward. PostgreSQL tests use PGlite with a mock Auth schema; local integration tests separately exercise the real Auth/REST services and application endpoints.
+
+Before production cutover verify two reader accounts, signup/reset delivery, private drafts/previews, publish behavior and metadata, seven-slot keyboard/drag arrangements, role boundaries, comment ownership, existing story redirects and mobile/dark appearance. Keep GitHub Pages unchanged until the new host passes those checks.
