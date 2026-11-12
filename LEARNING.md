@@ -1,5 +1,17 @@
 # Learning notes
 
+## 2026-11-12 — Add three stories and an automatic archive
+
+Added sourced Josh Downs, Mahomes family and Harrison Butker stories with the three supplied photographs, full article pages, Tony Hernandez bylines and natural inline attribution. The Butker story reflects Andy Reid's decision to keep him kicking against Atlanta this week. The large Downs photograph is published as a smaller copy for faster loading; the original uploads are preserved.
+
+The editorial JSON now drives The Latest automatically: the four newest unfeatured stories appear on the homepage, with JSON order breaking date ties. Existing lead/supporting stories keep their placements. A generated archive at `news/` lists every published article newest first, so older stories retain their URLs and remain discoverable when newer coverage arrives. Navigation and article links lead to the archive. No database is required on GitHub Pages; that can follow in the next backend phase.
+
+Takeaway: keeping story data separate from presentation lets one build command update the homepage, archive and article pages together.
+
+Validation: all 12 generated pages passed local link/fragment, image attribute, unique ID and primary heading checks. Confirmed the new three stories plus Swift fill The Latest, all 10 articles appear in the archive, and the three fixed feature placements remain. Repeat generation produced identical files. Independent static review found no remaining issues; `git diff --check` passed. Browser preview was unavailable, so visual appearance remains unverified.
+
+The homepage, archive, three new articles and their photographs returned HTTP 200 from the local server. A temporary-copy check added a future story and confirmed that the oldest Latest card automatically leaves the homepage while its archive entry and article URL remain.
+
 ## 2026-11-08 — Create the starter project
 
 ### Page structure (`index.html`)
